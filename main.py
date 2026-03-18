@@ -1,0 +1,93 @@
+from turtle import *
+t= Turtle()
+t.speed(0)
+#Plano  cartesiano:
+t.fd(300)
+t.stamp()
+t.bk(600)
+t.rt(180)
+t.stamp()
+t.goto(0,0)
+t.rt(90)
+t.fd(300)
+t.stamp()
+t.bk(600)
+t.rt(180)
+t.stamp()
+
+#Quadrante1:
+color1= textinput('Escolha uma cor', 'Escolha uma cor para  o trapézio:')
+t.color('black')
+t.begin_fill()
+t.fillcolor(color1)
+t.pu()
+t.goto(50,50)
+t.pd()
+t.lt(135)
+t.fd(100)
+t.rt(45)
+t.fd(200)
+t.rt(45)
+t.fd(100)
+t.rt(135)
+t.fd(342)
+t.end_fill()
+
+#Quadrante2:
+color2= textinput('Escolha uma cor', 'Escolha uma cor para  o triângulo:')
+t.color('black')
+t.begin_fill()
+t.fillcolor(color2)
+t.pu()
+t.goto(-50,50)
+t.pd()
+t.rt(45)
+t.fd(150)
+t.lt(90)
+t.fd(150)
+t.lt(135)
+t.fd(212)
+t.end_fill()
+
+
+#Quadrante3:
+color3=textinput('Escolha uma cor', 'Escolha uma cor para  o retângul:')
+t.color('black')
+t.begin_fill()
+t.fillcolor(color3)
+t.pu()
+t.goto(-50,-50)
+t.pd()
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(250)
+t.rt(90)
+t.fd(100)
+t.rt(90)
+t.fd(250)
+t.end_fill()
+
+
+#Quadrante4:
+color4= textinput('Escolha uma cor', 'Escolha uma cor para  o hexágono:')
+t.color('black')
+t.begin_fill()
+t.fillcolor(color4)
+t.pu()
+t.goto(+130,-50)
+t.pd()
+for _ in range(8):
+    t.fd(80)
+    t.rt(45)
+t.end_fill()
+
+#Espiral:
+t.up()
+t.goto(230,120)
+t.pd()
+for i in range(50):
+    t.forward(i)
+    t.left(20)
+
+mainloop()
